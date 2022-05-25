@@ -1,0 +1,1 @@
+boookmarklet generated with: https://caiorss.github.io/bookmarklet-maker/
