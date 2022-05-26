@@ -17,23 +17,23 @@
     style.id = "biotic-text"
     document.head.appendChild(style);
   }
-  window.biotic_mode = ((window.biotic_mode || 0) + 1) % 5;
+  window.biotic_mode = ((window.biotic_mode || 0) + 1) % 4;
 
   style.textContent = `
     biotic-bold { font-weight: bold; }
     biotic-light { font-weight: light; }
   `
   switch (window.biotic_mode) {
-    case 1:
+    case 0:
       break;
-    case 2:
+    case 1:
       style.textContent+= `
         biotic-bold, biotic-light { 
           font-family: 'Inter', sans-serif !important;
         }
       `
       break;
-    case 3:
+    case 2:
       style.textContent+= `
         biotic-bold, biotic-light { 
           font-family: 'Inter', sans-serif !important;
@@ -41,7 +41,7 @@
         }
       `
       break;
-    case 4:
+    case 3:
       style.textContent+= `
         biotic-bold, biotic-light { 
           font-family: 'Inter', sans-serif !important;
