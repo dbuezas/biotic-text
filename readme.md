@@ -7,6 +7,9 @@ Until they finish the extension, here's bookmarklet to do the same
 
 Go to https://dbuezas.github.io/biotic-text/ and drag&drop the link to the bookmark bar
 
+
+![image info](./demo.png)
+
 # Implementation details
 
 * Goookmarklet generated with: https://caiorss.github.io/bookmarklet-maker/
