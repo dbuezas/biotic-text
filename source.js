@@ -19,30 +19,40 @@
       document.head.appendChild(style);
     }
 
-    style.textContent = `
-      biotic-bold { font-weight: bold; }
-      biotic-light { font-weight: light; }
-    `
+    style.textContent = ``
     switch (window.biotic_mode) {
       case 0:
+        // The wrappers won't be inserted
         break;
       case 1:
         style.textContent+= `
+          biotic-bold { font-weight: bold; }
+          biotic-light { font-weight: light; }
+        `
+        break;
+      case 2:
+        style.textContent+= `
+          biotic-bold { font-weight: bold; }
+          biotic-light { font-weight: light; }        
           biotic-bold, biotic-light { 
             font-family: 'Inter', sans-serif !important;
           }
         `
         break;
-      case 2:
+      case 3:
         style.textContent+= `
+          biotic-bold { font-weight: bold; }
+          biotic-light { font-weight: light; }  
           biotic-bold, biotic-light { 
             font-family: 'Inter', sans-serif !important;
             letter-spacing: 0.04mm !important;
           }
         `
         break;
-      case 3:
+      case 4:
         style.textContent+= `
+          biotic-bold { font-weight: bold; }
+          biotic-light { font-weight: light; }  
           biotic-bold, biotic-light { 
             font-family: 'Inter', sans-serif !important;
             letter-spacing: 0.04mm !important;
@@ -62,7 +72,6 @@
     }
   }
   function wrapElements(){
-    if (window.biotic_mode == 0) return;
     getAllTextNodes().forEach((el) => {
       if (el.textContent.trim().length < 2) return;
       if (["SCRIPT", "STYLE"].includes(el.parentElement.tagName)) return;
@@ -79,9 +88,11 @@
   }
 
   /***** */
-  
-  window.biotic_mode = ((window.biotic_mode || 0) + 1) % 4;
+
+  window.biotic_mode = ((window.biotic_mode || 0) + 1) % 5;
   undo();
-  wrapElements();
-  addStyle();
+  if (window.biotic_mode > 0) {
+    wrapElements();
+    addStyle();
+  }
 })();
