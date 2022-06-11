@@ -27,13 +27,13 @@
       case 1:
         style.textContent+= `
           biotic-bold { font-weight: bold; }
-          biotic-light { font-weight: light; }
+          biotic-light { font-weight: normal; }
         `
         break;
       case 2:
         style.textContent+= `
           biotic-bold { font-weight: bold; }
-          biotic-light { font-weight: light; }        
+          biotic-light { font-weight: normal; }        
           biotic-bold, biotic-light { 
             font-family: 'Inter', sans-serif !important;
           }
@@ -42,7 +42,7 @@
       case 3:
         style.textContent+= `
           biotic-bold { font-weight: bold; }
-          biotic-light { font-weight: light; }  
+          biotic-light { font-weight: normal; }  
           biotic-bold, biotic-light { 
             font-family: 'Inter', sans-serif !important;
             letter-spacing: 0.04mm !important;
@@ -52,7 +52,7 @@
       case 4:
         style.textContent+= `
           biotic-bold { font-weight: bold; }
-          biotic-light { font-weight: light; }  
+          biotic-light { font-weight: normal; }  
           biotic-bold, biotic-light { 
             font-family: 'Inter', sans-serif !important;
             letter-spacing: 0.04mm !important;
